@@ -5,19 +5,19 @@ Config::Default.configure do
   set :secrets, ENV.fetch('SECRETS') { 'YOU CANNT GUESS ME' }
   set :max_threads, ENV.fetch('MAX_THREADS') { 5 }
 
-  set :database_url, ENV['DATABASE_URL']
+  set :database_url, ENV['LARK_NOTE_DATABASE_URL']
 end
 
 Config::Development.configure do 
-  # set :database_url, ENV['DATABASE_URL']
+  set :database_url, ENV['LARK_NOTE_DEV_DATABASE_URL']
 end
 
 Config::Test.configure do 
-  # set :database_url, ENV['DATABASE_URL']
+  # set :database_url, ENV['LARK_NOTE_DATABASE_URL']
 end
 
 Config::Production.configure do 
-  # set :database_url, ENV['DATABASE_URL']
+  # set :database_url, ENV['LARK_NOTE_DATABASE_URL']
 end
 
 
