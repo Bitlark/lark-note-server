@@ -12,4 +12,13 @@ class NoteSpacesController < BaseController
         data: data
       })
     end
+
+
+    post '/' do
+        
+      puts params
+      json({
+        data: params
+      })
+    end
   end
